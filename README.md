@@ -1,11 +1,11 @@
 # staking-contracts
 
-Smart contracts for IBFT PoS
+Staking contracts for Exzocoin
 
 ## How to start
 
 ```shell
-$ git clone https://github.com/0xPolygon/staking-contracts.git
+$ git clone https://github.com/ExzoNetwork/staking-contracts.git
 $ cd staking-contracts
 $ npm i
 ```
@@ -22,7 +22,7 @@ $ npm run build
 $ npm run test
 ```
 
-### Deploy contract to Polygon Edge
+### Deploy contract to Exzocoin
 
 ```shell
 $ npm run deploy
@@ -46,4 +46,17 @@ $ npm run unstake
 
 ```shell
 $ npm run info
+```
+
+## Register BLS keys
+Exzocoin runs in BLS mode, so in order for nodes to become validators, they need to register their BLS public keys after staking.
+
+Setup the your `.env` file:
+```
+cp .env.register .env
+```
+
+Fill out the variables and then run the following command:
+```
+npm run register-blskey
 ```
